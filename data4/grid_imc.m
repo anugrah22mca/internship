@@ -31,15 +31,15 @@ end
 %[lon_mesh, lat_mesh] = meshgrid(lon_grid, lat_grid);
 
 figure;
-surf(lon_mesh, lat_mesh, grid_imc1);
-xlabel('Longitude');
-ylabel('Latitude');
-zlabel('IMC');
-title('IMC Data');
-%pcolor(lon_grid,lat_grid,grid_imc1);
-%shading interp
+%surf(lon_mesh, lat_mesh, grid_imc1);
+%xlabel('Longitude');
+%ylabel('Latitude');
+%zlabel('IMC');
+%title('IMC Data');
+pcolor(lat_grid,lon_grid,grid_imc1);
+shading interp
 %worldmap([min(lat_grid) max(lat_grid)], [min(lon_grid) max(lon_grid)]);
-%geoshow(lat_mesh, lon_mesh, grid_imc1, 'DisplayType', 'surface');
+geoshow(lat_mesh, lon_mesh, grid_imc1, 'DisplayType', 'surface');
 %colorbar;
 
 latitude1 = double(h5read(file_name, '/Latitude'));
