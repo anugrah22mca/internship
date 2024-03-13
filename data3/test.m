@@ -7,8 +7,8 @@ for n = 1:length(folder)
     longitude = h5read(file_name1, '/Longitude');
     IMC = h5read(file_name1, '/IMC');
 
-    kerala_lat_indices = find(latitude >= lat_grid(1) & latitude <= lat_grid(end));
-    kerala_lon_indices = find(longitude >= lon_grid(1) & longitude <= lon_grid(end));
+    kerala_lat_indices = find(latitude >= lat_grid(1) & latitude <= lat_grid(2));
+    kerala_lon_indices = find(longitude >= lon_grid(1) & longitude <= lon_grid(2));
     res = [kerala_lat_indices; kerala_lon_indices];
     
     for j = 1:length(lat_grid)
