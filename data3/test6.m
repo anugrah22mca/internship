@@ -1,6 +1,6 @@
 folder = dir("*.h5");
-lat_grid = 0:0.5:20;
-lon_grid = 65:0.5:85;
+lat_grid = 8:0.5:14;
+lon_grid = 70:0.5:80;
 
 for n = 1:length(folder)
     FILENAME = folder(n).name;

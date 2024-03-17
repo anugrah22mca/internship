@@ -1,0 +1,19 @@
+% Assuming lon_grid and lat_grid are 2D grids
+[X, Y] = meshgrid(lon_grid, lat_grid);
+
+% Reshape mean_IMC to match the dimensions of lon_grid and lat_grid
+%Z = reshape(mean_IMC, size(X));
+
+% Create the plot with contours
+figure;
+contourf(lon_grid, lat_grid, );
+colorbar;
+hold on;
+
+% Plot the map
+geoshow('landareas.shp', 'FaceColor', [0.5 0.7 0.5]);
+
+% Adjust the axes labels
+xlabel('Longitude');
+ylabel('Latitude');
+title('Contours with Map Overlay');
